@@ -9,8 +9,8 @@
     <td><%= post.title %></td>
     <td>
     <%=link_to "View", post_path(post.id) %>
-    
-    <a href="#" > Delete</a> 
+    <%=link_to "Edit", edit_post_path(post.id) %>
+    <%=link_to "Delete", post_path(post.id), method: "delete", "data-confirm":"Kwekkwek" %>
     </td>
   </tr>
   <%end%>

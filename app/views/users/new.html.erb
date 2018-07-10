@@ -1,0 +1,14 @@
+<h1>Registration</h1>
+
+<%= form_with model: @user, local: true do |f| %>
+  <%= f.label :FirstName %>
+  <%= f.text_field :first_name %> <br/>
+  <%= f.label :LastName %>
+  <%= f.text_field :last_name %> <br/>
+  <%= f.label :MiddleName %>
+  <%= f.text_field :middle_name %> <br/>
+  <%= f.label :Email %>
+  <%= f.text_field :email %> <br/>
+  <%= f.submit %>
+
+<% end %>
