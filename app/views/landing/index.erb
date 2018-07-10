@@ -1,1 +1,21 @@
-  This is my landing page! :D
+This is my landing page! :D
+<h4><%= @name %></h4>
+<ul>
+<% @guests.each do |guest| %>
+  <p> <%= guest %> </p>
+  <% end %>
+
+  <%= form_with url: root_path do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %> <br/>
+  
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %><br/>
+    
+    <%= f.text_area :wat %>
+    <%= f.select :city_id, [['Lisbon', 1], ['Madrid', 2]] %>
+    
+    <%= f.submit %>
+  
+  <% end %>
+

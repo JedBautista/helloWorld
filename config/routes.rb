@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   get 'landing', to: "landing#index"
+  root "landing#index"
+
+  resources :posts
+  resources :authors
+
   
-
-  resources :posts, only: :index
-  get 'authors', to: "authors#index"
-
-  root "authors#index"
 end
